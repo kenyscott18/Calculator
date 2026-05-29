@@ -38,7 +38,12 @@ function divide() {
   createAndWriteOutput('/', initialResult, enteredNumber);
 }
 
+function resetPage() {
+  location.reload();
+}
+
 addBtn.addEventListener('click', add);
 subtractBtn.addEventListener('click', subtract);
 multiplyBtn.addEventListener('click', multiply);
 divideBtn.addEventListener('click', divide);
+resetBtn.addEventListener('click', resetPage);
