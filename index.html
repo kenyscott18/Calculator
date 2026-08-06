@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,9 +9,9 @@
       href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/styles/style.css" />
-  <script src="assets/scripts/script2.js" defer></script>
-  <script src="assets/scripts/script.js" defer></script>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script src="./assets/scripts/script2.js" defer></script>
+    <script src="./assets/scripts/script.js" defer></script>
   </head>
   <body>
     <header>
@@ -19,18 +19,33 @@
     </header>
 
     <section id="calculator">
-      <input type="number" id="input-number" />
+      <div class="input-group">
+        <label for="input-number-1">First number</label>
+        <input type="number" id="input-number-1" inputmode="decimal" />
+      </div>
+
       <div id="calc-actions">
         <button type="button" id="btn-add">+</button>
         <button type="button" id="btn-subtract">-</button>
         <button type="button" id="btn-multiply">*</button>
         <button type="button" id="btn-divide">/</button>
       </div>
+
+      <div class="input-group">
+        <label for="input-number-2">Second number</label>
+        <input type="number" id="input-number-2" inputmode="decimal" />
+      </div>
+
+      <button type="button" id="btn-equals">=</button>
+
+      <p id="error-message" role="alert" aria-live="assertive"></p>
     </section>
-    <section id="results">
+
+    <section id="results" aria-live="polite">
       <h2 id="current-calculation">0</h2>
       <h2>Result: <span id="current-result">0</span></h2>
     </section>
+
     <button type="button" id="btn-reset">Reset</button>
   </body>
 </html>
